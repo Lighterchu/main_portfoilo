@@ -38,10 +38,20 @@
         <div class="bg-gray-500 w-96 text-black m-auto rounded-lg">
           <form ref="form" @submit.prevent="sendEmail">
             <label>Name</label>
-            <input class="m-2 px-2" placeholder="Place name here" type="text" name="user_name"/>
+            <input
+              class="m-2 px-2"
+              placeholder="Place name here"
+              type="text"
+              name="user_name"
+            />
             <br />
             <label>Email</label>
-            <input class="m-2 px-2" type="email" placeholder="Place email here" name="user_email"/>
+            <input
+              class="m-2 px-2"
+              type="email"
+              placeholder="Place email here"
+              name="user_email"
+            />
             <br />
             <div class="mr-4">
               <label class="">message</label>
@@ -64,7 +74,7 @@
     <div v-if="contact">
       <div class="justify-center mt-2 w-4/5 m-auto">
         <div class="bg-gray-500 rounded-xl w-80 m-auto">
-          <h1 class="p-6 flex justify-center">Thank you for contacting me </h1>
+          <h1 class="p-6 flex justify-center">Thank you for contacting me</h1>
           <h2 class="flex justify-center pb-2">Email sent</h2>
         </div>
       </div>
@@ -75,7 +85,7 @@
 <script>
 import cards from "~/components/cards.vue";
 import emailjs from "@emailjs/browser";
-import { getData, setData} from 'nuxt-storage/local-storage';
+import { getData, setData } from "nuxt-storage/local-storage";
 export default {
   name: "index",
   components: {
@@ -122,11 +132,10 @@ export default {
   methods: {
     sendEmail() {
       const timestamp = new Date().toISOString();
-      this.contact = true
-      setData("user_email_sent", { value: "API_Session", timestamp: timestamp });
-      
-      
-         emailjs
+      this.contact = true;
+      localStorage.setItem("user_email_sent",timestamp);
+
+      emailjs
         .sendForm("service_kcrawck", "template_13g2fho", this.$refs.form, {
           publicKey: this.$config.public.EMAILJS,
         })
@@ -139,11 +148,10 @@ export default {
           }
         );
       setTimeout(() => {
-          this.contact = false
-          localStorage.removeItem('user_email_sent');
-          console.log("Data removed from local storage");
+        this.contact = false;
+        localStorage.removeItem("user_email_sent");
+        console.log("Data removed from local storage");
       }, 5000);
-   
     },
   },
   mounted() {
@@ -152,7 +160,7 @@ export default {
     if (existingData) {
       this.contact = true; // Set contact to true if data exists
     }
-  }
+  },
 };
 </script>
 
