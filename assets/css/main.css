@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(148 163 184);
+    /* background-image: url('assets/background.jpeg'); */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+  }
+
