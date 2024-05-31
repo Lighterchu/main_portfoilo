@@ -151,7 +151,7 @@ export default {
         this.contact = false;
         localStorage.removeItem("user_email_sent");
         console.log("Data removed from local storage");
-      }, 5000);
+      }, 10000);
     },
   },
   mounted() {
