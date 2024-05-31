@@ -33,7 +33,7 @@
   </section>
   <section>
     <div v-if="!contact" class="w-full h-full bg-black text-center text-wrap">
-      <div class="w-full h-56 bg-gray-600">
+      <div class="w-full h-72 bg-gray-600">
         <h1>Contact Me</h1>
         <div class="bg-gray-500 w-96 text-black m-auto rounded-lg">
           <form ref="form" @submit.prevent="sendEmail">
@@ -64,8 +64,7 @@
             </div>
             <br />
             <div class="flex space-x-2 justify-center">
-              <button type="submit">Send email</button>
-              <button @click="getInformation">Check states</button>
+              <button type="submit" class="bg-gray-200 mb-2 p-3 hover:bg-green-500 rounded-lg">Send email</button>
             </div>
           </form>
         </div>
@@ -85,7 +84,6 @@
 <script>
 import cards from "~/components/cards.vue";
 import emailjs from "@emailjs/browser";
-import { getData, setData } from "nuxt-storage/local-storage";
 export default {
   name: "index",
   components: {
