@@ -9,4 +9,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    public: {
+      EMAILJS: process.env.EMAILJS
+    }
+  },  
+
 })

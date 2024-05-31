@@ -123,22 +123,21 @@ export default {
     sendEmail() {
       const timestamp = new Date().toISOString();
       this.contact = true
-      setData("user_email_sent", { value: 123, timestamp: timestamp });
-      console.log(this.contact);
-      // Set data in local storage with a timestamp
+      setData("user_email_sent", { value: "API_Session", timestamp: timestamp });
       
-        //  emailjs
-        // .sendForm("service_kcrawck", "template_13g2fho", this.$refs.form, {
-        //   publicKey: "HRlmK6uTqIcLyyyzO",
-        // })
-        // .then(
-        //   () => {
-        //     console.log("SUCCESS!");
-        //   },
-        //   (error) => {
-        //     console.log("FAILED...", error.text);
-        //   }
-        // );
+      
+         emailjs
+        .sendForm("service_kcrawck", "template_13g2fho", this.$refs.form, {
+          publicKey: this.$config.public.EMAILJS,
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
       setTimeout(() => {
           this.contact = false
           localStorage.removeItem('user_email_sent');
