@@ -111,7 +111,7 @@ export default {
       projects: [
         {
           name: "Apex tracker",
-          site: "https://lighterchu.github.io/ApexTracker/",
+          site: "https://apextrackerr.netlify.app",
           image: "apex",
         },
         {
@@ -124,6 +124,7 @@ export default {
           site: "https://lighterchu.github.io/todolist/",
           image: "todolist",
         },
+        
       ],
     };
   },
