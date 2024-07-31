@@ -3,7 +3,7 @@
     <div
       class="m-auto px-2 w-full bg-black/50 bg-cover bg-[url('assets/background.jpeg')]"
     >
-      <p class="introduction text-xs bg-black/50 px-2 pb-2">{{ introduction }}</p>
+      <p class="introduction text-1xl bg-black/50 px-2 pb-2">{{ introduction }}</p>
       <img
         src="assets/profilepicture.jpeg"
         class="bg-red-200 size-40 rounded-full m-auto"
