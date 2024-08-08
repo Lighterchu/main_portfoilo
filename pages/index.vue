@@ -95,7 +95,7 @@ export default {
       introduction: `
     Hello, I'm Ben, a passionate web developer with over 10 years of coding experience.
     While web development isn't my primary profession, it has been a significant part of my life and a driving force behind many of my personal and professional projects.
-    My main focus lies in frontend development, where I excel in creating dynamic, responsive, and visually appealing user interfaces.
+    My main focus lies in Web development, where I excel in creating dynamic, responsive, and visually appealing user interfaces.
     
     Throughout my journey, I've honed my skills in HTML, CSS, JavaScript, and various frontend frameworks.
     My commitment to continuous learning and staying updated with the latest industry trends allows me to deliver cutting-edge web solutions.
